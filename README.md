@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Krishnasamy | Portfolio - School Project</title>
+  <title>Mizuki678 | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
@@ -11,7 +11,6 @@
       margin: 0;
       background: #f4f6f9;
       color: #333;
-      line-height: 1.6;
     }
 
     header {
@@ -50,7 +49,7 @@
       gap: 20px;
     }
 
-    main {
+    .main {
       flex: 3;
       background: white;
       padding: 20px;
@@ -58,7 +57,7 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.05);
     }
 
-    aside {
+    .sidebar {
       flex: 1;
       background: #eaeaea;
       padding: 20px;
@@ -72,17 +71,6 @@
       padding: 15px;
       margin-top: 40px;
     }
-
-    footer a {
-      color: white;
-      text-decoration: none;
-    }
-
-    @media (max-width: 768px) {
-      .content {
-        flex-direction: column;
-      }
-    }
   </style>
 </head>
 
@@ -94,32 +82,30 @@
 </header>
 
 <nav>
-  <a href="#home">Home</a>
-  <a href="#projects">Projects</a>
-  <a href="#about">About</a>
-  <a href="#contact">Contact</a>
+  <a href="#">Home</a>
+  <a href="#">Projects</a>
+  <a href="#">About</a>
+  <a href="#">Contact</a>
 </nav>
 
 <div class="container">
   <div class="content">
     
-    <main>
-      <section id="home">
-        <h2>Main Content</h2>
-        <p>This is where you showcase your projects, achievements, and skills.</p>
-      </section>
-    </main>
+    <div class="main">
+      <h2>Main Content</h2>
+      <p>School Portfolio: Adaptive Learning Based Concise Corrector Program</p>
+    </div>
 
-    <aside>
+    <div class="sidebar">
       <h2>Sidebar</h2>
-      <p>Add your GitHub profile link or quick info here.</p>
-    </aside>
+      <p>https://github.com/Mizuki678/index.html/edit/main/README.md</p>
+    </div>
 
   </div>
 </div>
 
 <footer>
-  © 2026 Your Name | Hosted on GitHub Pages
+  © 2026 Mizuki 678| Hosted on GitHub Pages
 </footer>
 
 </body>
