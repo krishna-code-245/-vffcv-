@@ -1,112 +1,137 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Mizuki678 | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+/* --- Core Variables & Reset --- */
+:root {
+    --bg-gradient: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    --text-color: white;
+    --primary-accent: #4facfe;
+    --secondary-accent: #00f2fe;
+    --card-bg: rgba(255, 255, 255, 0.12);
+    --input-bg: rgba(255, 255, 255, 0.9);
+    --shadow-color: rgba(79,172,254,0.4);
+    --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    --transition: all 0.3s ease;
+}
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f4f6f9;
-      color: #333;
-    }
+* { box-sizing: border-box; } /* Ensures consistent box model */
 
-    header {
-      background: #24292e;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    min-height: 100vh;
+    background: var(--bg-gradient);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+}
 
-    nav {
-      background: #0366d6;
-      text-align: center;
-      padding: 12px;
-    }
+/* --- Layout --- */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
+.content {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start; /* Better alignment for varying height components */
+    flex-wrap: wrap;
+}
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+/* --- Header & Navigation --- */
+header { text-align: center; padding: 20px 20px 10px; }
+header h1 {
+    font-size: 2.5rem;
+    background: linear-gradient(to right, var(--secondary-accent), var(--primary-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
 
-    .container {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 20px;
-    }
+nav { text-align: center; margin-bottom: 20px; }
+nav a {
+    color: var(--primary-accent);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: var(--transition);
+}
+nav a:hover { text-decoration: underline; }
 
-    .content {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
+/* --- Main Content & Panels --- */
+.main {
+    flex: 2;
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px var(--shadow-color);
+}
 
-    .main {
-      flex: 3;
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    }
+.main h2 { text-align: center; color: var(--primary-accent); margin-top: 0; }
 
-    .sidebar {
-      flex: 1;
-      background: #eaeaea;
-      padding: 20px;
-      border-radius: 10px;
-    }
+/* --- Forms & Inputs --- */
+label { display: block; margin-top: 15px; font-weight: bold; }
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: var(--input-bg);
+    color: #333;
+    font-size: 15px;
+    transition: var(--transition);
+}
+input:focus, select:focus { box-shadow: 0 0 10px var(--primary-accent); }
 
-    footer {
-      background: #24292e;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 40px;
-    }
-  </style>
-</head>
+input[type=submit] {
+    margin-top: 25px;
+    background: linear-gradient(135deg, var(--primary-accent), var(--secondary-accent));
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transition);
+}
+input[type=submit]:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px var(--primary-accent);
+}
 
-<body>
+#status {
+    margin-top: 15px;
+    font-weight: bold;
+    color: var(--secondary-accent);
+    text-align: center;
+}
 
-<header>
-  <h1>Welcome to My GitHub Page</h1>
-  <p>Student Portfolio | Built with GitHub Pages</p>
-</header>
+/* --- Sidebar --- */
+.sidebar {
+    flex: 1;
+    text-align: center;
+    min-width: 250px; /* Prevents too narrow sidebar */
+}
+.sidebar img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.2));
+}
 
-<nav>
-  <a href="#">Home</a>
-  <a href="#">Projects</a>
-  <a href="#">About</a>
-  <a href="#">Contact</a>
-</nav>
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 15px;
+    color: #ccc;
+    margin-top: auto; /* Pushes footer down */
+}
 
-<div class="container">
-  <div class="content">
-    
-    <div class="main">
-      <h2>Main Content</h2>
-      <p>School Portfolio: Adaptive Learning Based Concise Corrector Program</p>
-    </div>
-
-    <div class="sidebar">
-      <h2>Sidebar</h2>
-      <p>https://github.com/Mizuki678/index.html/edit/main/README.md</p>
-    </div>
-
-  </div>
-</div>
-
-<footer>
-  © 2026 Mizuki 678| Hosted on GitHub Pages
-</footer>
-
-</body>
-</html>
+/* --- Responsive Media Queries --- */
+@media (max-width: 768px) {
+    .content { flex-direction: column; }
+    .sidebar { order: -1; } /* Puts sidebar on top on mobile */
+    .main { padding: 20px; }
+}
+</style>
